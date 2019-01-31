@@ -12,12 +12,8 @@ sleep(0.1)
 
 for x in range(1,100):
    raw_bytes=ADS.read(2)
-   raw_bipolar=int.from_bytes(raw_bytes, byteorder='big')
-   if raw_bipolar > 32767:
-      value = 65535 - raw_bipolar
-   else:
-      value = raw_bipolar + 32768
-   per_value=value/65535
+   value = int.from_bytes(raw_bytes, byteorder='big')
+   per_value=value/32767
    print(value,per_value)
    sleep(1)
 
