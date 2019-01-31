@@ -1,7 +1,6 @@
 # ADS1115 continuous mode
 
 import i2cdev
-import numpy as np
 from time import sleep
 
 
