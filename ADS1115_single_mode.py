@@ -37,3 +37,9 @@ def ADS1115_read():
   
   out = [c0,c1,c2,c3]
   return out
+
+
+for x in range(1,1000):
+   print(ADS1115_read())
+
+print('Finished')
